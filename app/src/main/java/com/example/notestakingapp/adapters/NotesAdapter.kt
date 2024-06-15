@@ -50,6 +50,7 @@ class NotesAdapter() : RecyclerView.Adapter<NotesViewHolder>() {
 
     fun filterNotesBasedOnSearch(searchQuery : String)
     {
+
         notesToShow.clear()
         val lowerSQ = searchQuery.lowercase()
         notesToShow = allNotes.filter { it.noteTitle.lowercase().contains(lowerSQ) || it.noteDescription.lowercase().contains(lowerSQ)}.toMutableList()
