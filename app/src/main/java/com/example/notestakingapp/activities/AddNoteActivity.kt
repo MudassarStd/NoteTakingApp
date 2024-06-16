@@ -40,6 +40,7 @@ class AddNoteActivity : AppCompatActivity() {
 
             CoroutineScope(Dispatchers.IO).launch {
                 viewModel.insertNote(note)
+
             }
 
         }
